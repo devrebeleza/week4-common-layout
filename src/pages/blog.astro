@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/apple-touch-icon-sin-fondo-devrebeleza.png"
+    />
+    <title>Blog</title>
+  </head>
+  <body class="bg-gradient-to-b from-indigo-300 via-purple-300">
+    <div class="pt-8">
+     <!-- NavBar tailwind -->
+		<nav class="flex justify-center space-x-2 sm:space-x-10 pb-10">
+			{[
+				['Home', '/'],
+				['Pricing', '/pricing'],
+				['Blog', '/blog'], 
+				['Login', '/login'],
+			].map(([title, url]) => (
+					<a href={url} class="rounded-lg px-3 py-2 text-slate-500 font-medium hover:bg-slate-100 hover:text-slate-900 active:text-slate-900"  >{title}</a>		 									  
+			))}
+			<a
+					href="/signup"
+					class="font-medium text-white  hover:bg-blue-600 bg-blue-500 px-3 sm:px-3 py-2 -mt-1 rounded-lg"
+					>Sign up</a
+					>
+		</nav>
+      <!-- NavBar -->
+     <!--  <nav class="flex justify-center space-x-8 sm:space-x-10 pb-10">
+        <a
+          href="/"
+          class="font-medium text-gray-500 hover:text-gray-900 hover:underline"
+          >Home</a
+        >
+        <a
+          href="/pricing"
+          class="font-medium text-gray-500 hover:text-gray-900 hover:underline"
+          >Pricing</a
+        >
+        <a
+          href="/blog"
+          class="font-bold text-gray-800 hover:text-gray-900 hover:underline"
+          >Blog</a
+        >
+        <a
+          href="/login"
+          class="font-medium text-gray-500 hover:text-gray-900 hover:underline"
+          >Login</a
+        >
+        <a
+          href="/signup"
+          class="font-medium text-white  hover:bg-blue-600 bg-blue-500 px-2 sm:px-3 py-2 -mt-2 rounded-lg"
+          >Sign up</a
+        >
+      </nav> -->
+      <!-- Title -->
+      <h1
+        class="text-center text-3xl mb-10 font-extrabold tracking-tighter text-gray-900"
+      >
+        <span
+          class="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-pink-500 relative inline-block"
+        >
+          <span class="relative text-white">Blog</span>
+        </span>
+      </h1>
+
+      <!-- Blog -->
+      <div class=" text-center mt-20 mx-auto max-w-3xl px-10">
+        <div
+          class="mb-10 p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col cursor-pointer  
+            hover:bg-blue-200 hover:shadow-2xl hover:shadow-red-300 hover:scale-105 hover:-translate-y-1 
+            transition ease-in-out delay-150 
+            focus:outline-none focus:ring focus:bg-blue-200 focus:ring-violet-300 
+            active:bg-blue-50"
+        >
+          <p class="mb-6">Feb 10 2022</p>
+          <h3 class="text-2xl font-bold text-gray-900">February big update</h3>
+          <p class="mt-6 text-gray-500">
+            Today we present a new big update in february ...
+          </p>
+        </div>
+
+        <div
+          class="mb-10 p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col cursor-pointer  
+            hover:bg-blue-200 hover:shadow-2xl hover:shadow-red-300 hover:scale-105 hover:-translate-y-1 
+            transition ease-in-out delay-150 
+            focus:outline-none focus:ring focus:bg-blue-200 focus:ring-violet-300 
+            active:bg-blue-50"
+        >
+          <p class="mb-6">Jan 06 2022</p>
+          <h3 class="text-2xl font-bold text-gray-900">Some news</h3>
+          <p class="mt-6 text-gray-500">
+            Today we introduced a new big update ...
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="mt-20 pt-8 pb-4 border-t-2 border-gray-300 bg-gray-800">
+        <nav class="flex justify-center pb-10 space-x-10">
+          <a
+            href="/"
+            class="font-medium text-gray-500 hover:text-gray-900 hover:underline"
+            >Home</a
+          >
+          <a
+            href="#features"
+            class=" font-medium text-gray-500 hover:text-gray-900 hover:underline"
+            >Features</a
+          >
+          <a
+            href="/pricing"
+            class=" font-medium text-gray-500 hover:text-gray-900 hover:underline"
+            >Pricing</a
+          >
+        </nav>
+        <p class=" text-center text-gray-400">
+          &copy; 2022 Great Tool. All rights reserved &raquo; <a
+            href="https://renzogarcia.vercel.app"
+            target="_blank" >  devrebeleza</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
