@@ -12,5 +12,8 @@
     "@astrojs/tailwind": "^0.1.2",
     "astro": "^1.0.0-beta.7",
     "prettier-plugin-astro": "^0.0.12"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
   }
 }
