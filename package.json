@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "netlify dev",
     "build": "astro build",
     "preview": "astro preview"
   },
@@ -14,6 +14,7 @@
     "prettier-plugin-astro": "^0.0.12"
   },
   "dependencies": {
-    "express": "^4.18.0"
+    "express": "^4.18.0",
+    "serverless-http": "^3.0.1"
   }
 }
