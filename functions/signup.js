@@ -32,7 +32,7 @@ app.post('/api/signup', (req, res) => {
   }
 
   createAccount(email, password);
-  res.status(200).send('Account created succesfully whit express!!');
+  res.status(200).send('Account created succesfully with express!!');
 });
 
 const accountExists = (email) => {
