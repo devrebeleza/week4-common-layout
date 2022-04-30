@@ -6,7 +6,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /** Sign Up */
-app.post('/.netlify/functions/signup', (req, res) => {
+// old call -> app.post('/.netlify/functions/signup', (req, res) => {
+app.post('/api/signup', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const password_confirmation = req.body.password_confirmation;
@@ -31,7 +32,7 @@ app.post('/.netlify/functions/signup', (req, res) => {
   }
 
   createAccount(email, password);
-  res.status(200).send('Account created succesfully!!');
+  res.status(200).send('Account created succesfully whit express!!');
 });
 
 const accountExists = (email) => {
