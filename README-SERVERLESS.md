@@ -53,15 +53,15 @@ Inside of our Astro project, you'll see the following folders and files (just sh
 
 ### Extra feature
 
-Currently if we want to acces our Netlify Functions, we need to acces `/.netlify/functions/<function_name>` and this is not user-friendly.
+Currently if we want to access our Netlify Functions, we need to access `/.netlify/functions/<function_name>` and this is not user-friendly.
 We can do a redirect to improve it!
 This can be done with a file called `_redirects` in the publish directory of your site.
 Or (my choice) change the `netlify.toml` file by adding:
 
 > [[redirects]]
->       from = "/api/\*"
->       to = "/.netlify/functions/:splat"
->       status = 200
+>>       from = "/api/\*"
+>>       to = "/.netlify/functions/:splat"
+>>       status = 200
 
 f you've used Netlify Functions before, you may know that one way to trigger them is to visit your site with the path /.netlify/functions/<your function name>. However, if you wanted to expose your functions as an API, this doesn't look super user-friendly. Instead, we can use redirects to improve it!
 
