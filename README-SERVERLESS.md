@@ -24,7 +24,7 @@ this `"start": "astro dev"`, to this `"start": "netlify dev"`
 
 ### Using express
 
-if we want to use express to manage our http request, we need express and serverles-http packages
+if we want to use express to handle our http request, we need express and serverles-http packages
 
 ```
 npm install express --save
@@ -57,7 +57,7 @@ All commands are run from the root of the project, from a terminal:
 | Command | Action |
 | :--------------- | :----------------------------------------- |
 | `npm run start ` | Start local dev server at `localhost:3000` |
-|                  | and Server on `localhost:8888`             |
+| | and Server on `localhost:8888` |
 
 ## 👀 Where I founded all this?
 
@@ -72,4 +72,3 @@ All commands are run from the root of the project, from a terminal:
 4. Deploy an express js app to aws lambda [config express](https://bitbucket.org/blog/deploy-an-express-js-app-to-aws-lambda-using-the-serverless-framework)
 
 5. docs -> [to extract netlify.toml and structure](https://www.netlify.com/blog/2021/07/23/build-a-modern-shopping-site-with-astro-and-serverless-functions/)
-
