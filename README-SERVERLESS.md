@@ -51,13 +51,27 @@ Inside of our Astro project, you'll see the following folders and files (just sh
 └── package.json (modified)
 ```
 
+### Extra feature
+
+Currently if we want to acces our Netlify Functions, we need to acces `/.netlify/functions/<function_name>` and this is not user-friendly.
+We can do a redirect to improve it!
+This can be done with a file called `_redirects` in the publish directory of your site.
+Or (my choice) change the `netlify.toml` file by adding:
+
+> [[redirects]]
+>       from = "/api/\*"
+>       to = "/.netlify/functions/:splat"
+>       status = 200
+
+f you've used Netlify Functions before, you may know that one way to trigger them is to visit your site with the path /.netlify/functions/<your function name>. However, if you wanted to expose your functions as an API, this doesn't look super user-friendly. Instead, we can use redirects to improve it!
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 | Command | Action |
 | :--------------- | :----------------------------------------- |
 | `npm run start ` | Start local dev server at `localhost:3000` |
-| | and Server on `localhost:8888` |
+|                  |             and Server on `localhost:8888` |
 
 ## 👀 Where I founded all this?
 
@@ -72,3 +86,5 @@ All commands are run from the root of the project, from a terminal:
 4. Deploy an express js app to aws lambda [config express](https://bitbucket.org/blog/deploy-an-express-js-app-to-aws-lambda-using-the-serverless-framework)
 
 5. docs -> [to extract netlify.toml and structure](https://www.netlify.com/blog/2021/07/23/build-a-modern-shopping-site-with-astro-and-serverless-functions/)
+
+6. Api route friendly -> [Setting up redirects on Netlify](https://www.netlify.com/blog/2021/12/13/setting-up-redirects-on-netlify/?utm_campaign=featdaily21&utm_source=netlify&utm_medium=blog&utm_content=feature-list)

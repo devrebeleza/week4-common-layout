@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /** login */
-app.post('/.netlify/functions/login', (req, res) => {
+// old call -> app.post('/.netlify/functions/login', (req, res) => {
+app.post('/api/login', (req, res) => {
   console.log('received login details!');
   const email = req.body.email;
   console.log('email:', email);
